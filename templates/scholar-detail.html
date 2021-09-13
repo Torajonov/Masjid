@@ -1,0 +1,83 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+            <section>
+                <div class="w-100 pt-80 black-layer pb-70 opc65 position-relative">
+                    <div class="fixed-bg" style="background-image: url(https://www.americamagazine.org/sites/default/files/styles/article_image_750_x_503_/public/main_image/opened_quran.jpg.png?itok=kn3F70Xl);"></div>
+                    <div class="container">
+                        <div class="page-title-wrap text-center w-100">
+                            <div class="page-title-inner d-inline-block">
+                                <h1 class="mb-0">Масжид Имомлари</h1>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="{% url 'mainapp:Home' %}" title="Home">Бош саҳифа</a></li>
+                                    <li class="breadcrumb-item"><a href="{% url 'mainapp:About' %}" title="">Масжид Имомлари</a></li>
+                                    <li class="breadcrumb-item active">малумот</li>
+                                </ol>
+                            </div>
+                        </div><!-- Page Title Wrap -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-120 pb-280 position-relative">
+                    <img class="sec-botm-rgt-mckp img-fluid position-absolute" src="/static/assets/images/sec-botm-mckp.png" alt="Sec Bottom Mockup">
+                    <div class="container">
+                        <div class="team-detail-wrap w-100">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-lg-5">
+                                    <div class="team-detail-img w-100">
+                                        <img class="img-fluid w-100" src="{{sheikh.image.url}}" alt="Team Detail Image">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-7">
+                                    <div class="team-detail-inner w-100">
+                                        <div class="team-detail-info d-flex flex-wrap justify-content-between w-100 position-relative pat-bg gray-layer2 opc85 back-blend-multiply gray-bg4" style="background-image: url(assets/images/pattern-bg.jpg);">
+                                            <div class="team-detail-info-inner">
+                                                <h2 class="mb-0">{{sheikh.name}}</h2>
+                                                <span class="d-block thm-clr">{{sheikh.direction}}</span>
+
+                                                <div class="social-links4 text-center d-inline-flex">
+                                                    <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                                    <a href="https://www.google.com/" title="Google Plus" target="_blank"><i class="fab fa-telegram"></i></a>
+                                                    <a href="https://twitter.com/" title="Twitter" target="_blank"><i class="fab fa-youtube"></i></a>
+                                                </div>
+                                                <a class="thm-btn thm-bg" href="{% url 'mainapp:Contact' %}" title="">Боғланиш<span></span><span></span><span></span><span></span></a>
+                                            </div>
+                                            <div class="team-detail-info-inner">
+                                                <ul class="team-detail-info-list mb-0 list-unstyled">
+                                                    <li><span>Исми:</span>{{sheikh.fullname}}</li>
+                                                    <li><span>Фамилияси: </span> <a href="javascript:void(0);" title="">               {{sheikh.surname}}</a></li>
+                                                    <li><span>Манзили:</span>{{sheikh.address}}</li>
+                                                    <li><span>Телфон рақами:</span><a href="phone" title="">{{sheikh.phone}}</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="team-detail-experties w-100">
+                                            <!--
+                                            <div class="row">
+                                                <div class="col-md-5 col-sm-6 col-lg-5">
+                                                    <h3 class="mb-0">Courses of Expertise:</h3>
+                                                    <p class="mb-0">Lorem Ipsum passages, and more recently with desktop</p>
+                                                </div>
+                                                <div class="col-md-7 col-sm-6 col-lg-7">
+                                                    <ul class="experties-list mb-0 list-unstyled">
+                                                        <li><a href="javascript:void(0);" title="">Islamic Banking</a></li>
+                                                        <li><a href="javascript:void(0);" title="">Philanthropy & Needs</a></li>
+                                                        <li><a href="javascript:void(0);" title="">Shariah Laws</a></li>
+                                                        <li><a href="javascript:void(0);" title="">Modern Islam</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                        <div class="team-detail-desc w-100">
+                                            <h2 class="mb-0">{{sheikh.direction}}Хақида малумот</h2>
+                                            <p class="mb-0">{{sheikh.about}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- Team Detail Wrap -->
+                    </div>
+                </div>
+            </section>
+{%endblock%}

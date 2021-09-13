@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block  content %}
+            <section>
+                <div class="w-100 pt-80 black-layer pb-70 opc65 position-relative">
+                    <div class="fixed-bg" style="background:green;background-image: url(assets/images/page-title-bg.jpg);"></div>
+                    <div class="container">
+                        <div class="page-title-wrap text-center w-100">
+                            <div class="page-title-inner d-inline-block">
+                                <h1 class="mb-0">Мақола саҳифаси</h1>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="{% url 'mainapp:Home' %}" title="Home">Масжид - Бош саҳифа</a></li>
+                                    <li class="breadcrumb-item"><a href="{% url 'mainapp:Blog' %}" title="">БАРЧА МАҚОЛАЛАР</a></li>
+                                    <li class="breadcrumb-item active">Мақола саҳифаси</li>
+                                </ol>
+                            </div>
+                        </div><!-- Page Title Wrap -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-120 pb-260 position-relative">
+                    <img class="sec-botm-rgt-mckp img-fluid position-absolute" src="/static/assets/images/sec-botm-mckp.png" alt="Sec Bottom Mockup">
+                    <div class="container">
+                        <div class="post-detail-wrap w-100">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-lg-9">
+                                    <div class="post-detail-inner w-100">
+                                        <div class="post-detail-img w-100">
+                                            <img class="img-fluid w-100" src="{{blog_page.image.url}}" alt="Blog Detail Image 1">
+                                        </div>
+                                        <div class="post-detail-info position-relative w-100">
+                                            <div class="post-info2-inner text-center">
+                                                <div class="post-date2">
+                                                    <span class="d-block">13</span>
+                                                    <i class="d-block thm-bg">{{blog_page.date}}</i>
+                                                </div>
+                                                <div class="post-meta4 w-100">
+                                                    <span class="d-block"><i class="far fa-eye"></i>50 Views</span>
+                                                    
+                                                    
+                                                </div>
+                                            </div>
+                                            <ul class="post-meta2 d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
+                                                <li class="thm-clr">City, Goverment</li>
+                                                <li class="thm-clr">Muallif: <a href="javascript:void(0);" title="">{{blog_page.author}}</a></li>
+                                            </ul>
+                                            <h2 class="mb-0">{{blog_page.title}}</h2>
+                                            <b class="mb-0">{{blog_page.body|safe}}</b>
+
+                                        </div><br><br><h3>Изоҳлар {{blog_page.comment_set.all.count}}</h3><hr>
+{%for comment in blog_page.comment_set.all%}
+<div class="media">
+  <img class="d-flex mr-3" src="https://image.shutterstock.com/image-vector/mosque-logo-design-emblem-template-260nw-1115778791.jpg" width="50" height="50" alt="Generic placeholder image">
+  <div class="media-body">
+    <h5 class="mt-0">{{comment.name}}</h5>
+    <p>
+{{comment.message}}
+    </p>    
+
+
+  </div>
+</div>
+{%endfor%}
+
+
+
+                                        <div class="comment-reply w-100">
+                                            <h3 class="mb-0">МАҚОЛАДАН ҚАНДАЙ ФОЙДА ОЛДИНГИЗ?:</h3>
+                                            <form method="POST" class="w-100">
+                                                <div class="row mrg5">{%csrf_token%}
+                                                    <div class="col-md-12 col-sm-12 col-lg-12">
+                                                        <input name="name"type="text" placeholder="Исмингиз нима">
+                                                    </div>
+                                                    <div class="col-md-12 col-sm-12 col-lg-12">
+                                                        <textarea name="message" placeholder="Мақоладан қандай фойда олдингиз"></textarea>
+                                                        <button class="thm-btn thm-bg" type="submit">Хабарни юбориш<span></span><span></span><span></span><span></span></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div><!-- Comment Reply -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-lg-3">
+                                    <aside class="sidebar w-100">
+
+<!-- yangi qoshilgan maqolalarni chiqarish bolimi
+                                        
+                                        <div class="widget2 w-100">
+                                            <h3 class="widget-title2">RECENT POSTS</h3>
+                                            <div class="mini-posts-wrap w-100">
+                                                <div class="mini-post-box d-flex flex-wrap w-100">
+                                                    <a href="{{blogs.get_absalute_url}}" title=""><img class="img-fluid w-100" src="{{blog_page.image.url}}" alt="Mini Post Image 1"></a>
+                                                    <div class="mini-post-info">
+                                                        <span class="d-block thm-clr">Mar 20, 2020</span>
+                                                        <h4 class="mb-0"><a href="{{blogs.get_absalute_url}}" title="">{{blog_page.title}}</a></h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    -->
+                                 </div>
+                            </div>
+                        </div><!-- Post Detail Wrap -->
+                    </div>
+                </div>
+            </section>
+{%endblock%}
+

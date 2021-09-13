@@ -1,0 +1,59 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+            <section>
+                <div class="w-100 pt-80 black-layer pb-70 opc65 position-relative">
+                    <div class="fixed-bg" style="background-image: url(https://image.freepik.com/free-vector/flat-masjid-silhouette-illustration-with-pink-sky-background-and-lantern-silhouette_10141-195.jpg);"></div>
+                    <div class="container">
+                        <div class="page-title-wrap text-center w-100">
+                            <div class="page-title-inner d-inline-block">
+                                <h1 class="mb-0">Барча мақолалар</h1>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="{% url 'mainapp:Home' %}" title="Home">Бош саҳифа</a></li>
+                                    <li class="breadcrumb-item active">Барча мақолалар</li>
+                                </ol>
+                            </div>
+                        </div><!-- Page Title Wrap -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-120 pb-280 position-relative">
+                    <img class="sec-botm-rgt-mckp img-fluid position-absolute" src="/static/assets/images/sec-botm-mckp.png" alt="Sec Bottom Mockup">
+                    <div class="container">
+                        <div class="blog-wrap w-100">
+                            <div class="row">{%for blogs in blog %}
+                                <div class="col-md-6 col-sm-6 col-lg-4">
+                                    <div class="post-box w-100">
+                                        <div class="post-img overflow-hidden position-relative w-100">
+                                            <a href="{{blogs.get_absalute_url}}" title=""><img style="height:250px" src="{{blogs.image.url}}" alt="Blog Image 1"></a>
+                                        </div>
+                                        <div class="post-info position-relative w-100">
+                                            <a class="thm-bg" href="{{blogs.get_absalute_url}}" title=""><i class="fas fa-link"></i></a>
+                                            <span class="post-date thm-clr">{{blogs.date}}</span>
+                                            <h3 class="mb-0"><a href="{{blogs.get_absalute_url}}" title="">{{blogs.title}}</a></h3>
+                                            <ul class="post-meta d-flex flex-wrap mb-0 list-unstyled">
+                                                <li><i class="fas fa-user-alt"></i>Муаллиф: <a href="{{blogs.get_absalute_url}}" title="">{{blogs.author}}</a></li>
+                                                <li><i class="fas fa-comment-alt"></i>Изоҳлар {{blogs.comment_set.all.count}}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>{%endfor%}
+                            </div>
+                        </div><!-- Blog Wrap 
+                        <div class="pagination-wrap mt-20 d-flex flex-wrap justify-content-center text-center w-100">
+                            <ul class="pagination mb-0">
+                                <li class="page-item prev"><a class="page-link" href="javascript:void(0);" title=""><i class="fas fa-long-arrow-alt-left"></i></a></li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0);" title="">1</a></li>
+                                <li class="page-item active"><a class="page-link" href="javascript:void(0);" title="">2</a></li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0);" title="">3</a></li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0);" title="">4</a></li>
+                                <li class="page-item pg-rang">...........</li>
+                                <li class="page-item"><a class="page-link" href="javascript:void(0);" title="">24</a></li>
+                                <li class="page-item next"><a class="page-link" href="javascript:void(0);" title=""><i class="fas fa-long-arrow-alt-right"></i></a></li>
+                            </ul>
+                        </div> Pagination Wrap -->
+                    </div>
+                </div>
+            </section>
+{%endblock%}

@@ -1,0 +1,195 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+            <section>
+                <div class="w-100 pt-80 black-layer pb-70 opc65 position-relative">
+                    <div class="fixed-bg" style="background-image: url(https://static.vecteezy.com/system/resources/previews/000/363/461/original/vector-al-quran-stand-holder-illustration.jpg);"></div>
+                    <div class="container">
+                        <div class="page-title-wrap text-center w-100">
+                            <div class="page-title-inner d-inline-block">
+                                <h1 class="mb-0">Масжид хақида</h1>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="{% url 'mainapp:Home' %}" title="Home">Бош саҳифа</a></li>
+                                    <li class="breadcrumb-item active">Масжид хақида</li>
+                                </ol>
+                            </div>
+                        </div><!-- Page Title Wrap -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-120 pb-100 position-relative">
+                    <div class="container">
+                        <div class="about-wrap4 w-100">
+                            <div class="row align-items-center">
+                                <div class="col-md-12 col-sm-12 col-lg-7 order-lg-1">
+                                    <div class="about-video position-relative w-100">
+                                        <img class="img-fluid w-100" src="/static/assets/original.jpg" alt="About Image">
+                                        <a class="position-absolute spinner bg-color1" href="https://youtu.be/J1mfSDRJc6MWxuHBTES2-s" data-fancybox title=""><i class="fas fa-play"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-5">
+                                    <div class="about-inner4 w-100">
+                                        <span class="d-block thm-clr">Ер юзидаги биринчи одам</span>
+                                        <h2 class="mb-0">Ислом тарихни бошланиши</h2>
+                                        <p class="mb-0">Ислом (арабча — бўйсуниш, итоат этиш, ўзини Аллоҳ иродасига топшириш) — жаҳонда кенг тарқалган уч диндан (буддизм ва христианлик билан бир қаторда) бири. Ислом динига эътиқод қилувчилар арабча „муслим“ („садоқатли“; кўплиги „муслимун“) деб аталади. „Муслим“, „муслимун“ сўзининг бошқа халқлар орасида ўзгача талаффуз этиш (масалан, форсларда — мусалмон, ўзбекларда — мусулмон, қирғиз ва қозоқларда — мусулмон, Украина ва Россияда — басурман) натижасида бу динга эътиқод қилувчилар турли ном билан аталади. Лекин буларнинг ичида ҳозир мусулмон ибораси кенг тарқалган.
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- About Wrap 4 -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <!--- servis
+                <div class="w-100 pb-110 position-relative">
+                    <div class="container">
+                        <div class="sec-title text-center w-100">
+                            <div class="sec-title-inner d-inline-block">
+                                <i class="thm-clr flaticon-rub-el-hizb"></i>
+                                <h2 class="mb-0">Services We Offer</h2>
+                                <p class="mb-0">Adipiscing elit duis volutpat ligula nulla dapibus.</p>
+                            </div>
+                        </div>
+                        <div class="serv-wrap wide-sec">
+                            <div class="row mrg10 serv-caro">
+                                <div class="col-md-4 col-sm-6 col-lg-3">
+                                    <div class="serv-box text-center pat-bg gray-layer opc85 position-relative back-blend-multiply gray-bg w-100" style="background-image: url(/static/assets/images/pattern-bg.jpg);">
+                                        <i class="flaticon-mat thm-clr"></i>
+                                        <h3 class="mb-0">Help Poor's</h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, coteudtu adipisicing elit, sed do eiusmod tem por incididunt ut labore et.</p>
+                                        <a href="services-detail.html" title="">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-lg-3">
+                                    <div class="serv-box text-center pat-bg gray-layer opc85 position-relative back-blend-multiply gray-bg w-100" style="background-image: url(/static/assets/images/pattern-bg.jpg);">
+                                        <i class="flaticon-minaret thm-clr"></i>
+                                        <h3 class="mb-0">Mosque Development</h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, coteudtu adipisicing elit, sed do eiusmod tem por incididunt ut labore et.</p>
+                                        <a href="services-detail.html" title="">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-lg-3">
+                                    <div class="serv-box text-center pat-bg gray-layer opc85 position-relative back-blend-multiply gray-bg w-100" style="background-image: url(/static/assets/images/pattern-bg.jpg);">
+                                        <i class="flaticon-grave thm-clr"></i>
+                                        <h3 class="mb-0">Funeral Service</h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, coteudtu adipisicing elit, sed do eiusmod tem por incididunt ut labore et.</p>
+                                        <a href="services-detail.html" title="">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-lg-3">
+                                    <div class="serv-box text-center pat-bg gray-layer opc85 position-relative back-blend-multiply gray-bg w-100" style="background-image: url(/static/assets/images/pattern-bg.jpg);">
+                                        <i class="flaticon-quran thm-clr"></i>
+                                        <h3 class="mb-0">Quran Learning</h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, coteudtu adipisicing elit, sed do eiusmod tem por incididunt ut labore et.</p>
+                                        <a href="services-detail.html" title="">Read More</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-lg-3">
+                                    <div class="serv-box text-center pat-bg gray-layer opc85 position-relative back-blend-multiply gray-bg w-100" style="background-image: url(/static/assets/images/pattern-bg.jpg);">
+                                        <i class="flaticon-arabic thm-clr"></i>
+                                        <h3 class="mb-0">Community Service</h3>
+                                        <p class="mb-0">Lorem ipsum dolor sit amet, coteudtu adipisicing elit, sed do eiusmod tem por incididunt ut labore et.</p>
+                                        <a href="services-detail.html" title="">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-110 black-layer pb-70 opc7 position-relative">
+                    <div class="fixed-bg" style="background-image: url(http://www.daleelalmasjed.com/upload/167islam-man-sajda-prostration-windows-11.jpg);"></div>
+                    <div class="container">
+                        <div class="sec-title v2 text-center w-100">
+                            <div class="sec-title-inner d-inline-block">
+                                <i class="flaticon-rub-el-hizb thm-clr"></i>
+                                <h1 class="mb-0">Исломин устунлари</h1>
+                               
+                            </div>
+                        </div><!-- Sec Title -->
+                        <div class="pillars-wrap w-100">
+                            <ul class="pillars-list text-center d-flex flex-wrap justify-content-center align-items-center mb-0 list-unstyled">
+                                <li>
+                                    <div class="pillar-box position-relative w-100">
+                                        <span class="d-inline-block thm-clr position-relative"><span class="pat-bg gray-layer opc85 position-absolute back-blend-multiply gray-bg" style="background-image: url(/static/assets/images/pattern-bg.jpg);"></span><i class="flaticon-quran-1"></i></span>
+                                        <h3 class="mb-0">Shahadah</h3>
+                                        <i class="d-block thm-clr">IYMON</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pillar-box position-relative w-100">
+                                        <span class="d-inline-block thm-clr position-relative"><span class="pat-bg gray-layer opc85 position-absolute back-blend-multiply gray-bg" style="background-image: url(/static/assets/images/pattern-bg.jpg);"></span><i class="flaticon-mosque-1"></i></span>
+                                        <h3 class="mb-0">Salah</h3>
+                                        <i class="d-block thm-clr">NAMOZ</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pillar-box position-relative w-100">
+                                        <span class="d-inline-block thm-clr position-relative"><span class="pat-bg gray-layer opc85 position-absolute back-blend-multiply gray-bg" style="background-image: url(/static/assets/images/pattern-bg.jpg);"></span><i class="flaticon-star"></i></span>
+                                        <h3 class="mb-0">Sawm</h3>
+                                        <i class="d-block thm-clr">RO'ZA</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pillar-box position-relative w-100">
+                                        <span class="d-inline-block thm-clr position-relative"><span class="pat-bg gray-layer opc85 position-absolute back-blend-multiply gray-bg" style="background-image: url(/static/assets/images/pattern-bg.jpg);"></span><i class="flaticon-gift-box"></i></span>
+                                        <h3 class="mb-0">Zakat</h3>
+                                        <i class="d-block thm-clr">SADAQA</i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pillar-box position-relative w-100">
+                                        <span class="d-inline-block thm-clr position-relative"><span class="pat-bg gray-layer opc85 position-absolute back-blend-multiply gray-bg" style="background-image: url(/static/assets/images/pattern-bg.jpg);"></span><i class="flaticon-kaaba"></i></span>
+                                        <h3 class="mb-0">Hajj</h3>
+                                        <i class="d-block thm-clr">ZIYORAT</i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- Pillars Wrap -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-90 gray-layer pb-250 opc85 position-relative">
+                    <div class="fixed-bg patern-bg back-blend-multiply gray-bg" style="background-image: url(/static/assets/images/pattern-bg.jpg);"></div>
+                    <img class="sec-botm-rgt-mckp img-fluid position-absolute" src="/static/assets/images/sec-botm-mckp.png" alt="Sec Bottom Mockup">
+                    <div class="container">
+                        <div class="sec-title text-center w-100">
+                            <div class="sec-title-inner d-inline-block">
+                                <i class="thm-clr flaticon-rub-el-hizb"></i>
+                                <h2 class="mb-0">Маcжид Имомлари</h2>
+                                <p class="mb-0">Корабош-ота Масжиди Имомлари хақида малумот.</p>
+                            </div>
+                        </div><!-- Sec Title -->
+                        <div class="team-wrap res-row wide-sec2">
+                            <div class="row">
+                                {%for sheikh in sheikh %}
+                                <div class="col-md-4 col-sm-6 col-lg-3">
+                                    <div class="team-box text-center w-100">
+                                        <div class="team-img overflow-hidden position-relative w-100">
+                                            <img class="img-fluid w-100" src="{{sheikh.image.url}}" alt="Team Image 1">
+                                            <div class="social-links2 text-center d-inline-flex position-absolute">
+                                                <a class="facebook" href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                                <a class="twitter" href="https://twitter.com/" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                                                <a class="youtube" href="https://www.youtube.com/" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="team-info">
+                                            <h3 class="mb-0"><a href="{{sheikh.get_absalute_url}}" title="">{{sheikh.name}}</a></h3>
+                                            <span class="d-block thm-clr">{{sheikh.direction}}r</span>
+                                        </div>
+                                    </div>
+                                </div>{%endfor%}
+                            </div>
+                        </div><!-- Team Wrap -->
+                        <div class="view-more mt-05 d-inline-block text-center w-100">
+                            
+                        </div><!-- View More -->
+                    </div>
+                </div>
+            </section>
+{%endblock%}

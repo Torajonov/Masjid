@@ -1,0 +1,88 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+            <section>
+                <div class="w-100 pt-80 black-layer pb-70 opc65 position-relative">
+                    <div class="fixed-bg" style="background-image: url(https://st.depositphotos.com/1441191/2803/v/600/depositphotos_28030417-stock-illustration-quran-with-lamp-on-eid.jpg);"></div>
+                    <div class="container">
+                        <div class="page-title-wrap text-center w-100">
+                            <div class="page-title-inner d-inline-block">
+                                <h1 class="mb-0">Алоқа хизмати</h1>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="{% url 'mainapp:Home' %}" title="Home">Бош саҳифа</a></li>
+                                    <li class="breadcrumb-item active">Алоқа хизмати</li>
+                                </ol>
+                            </div>
+                        </div><!-- Page Title Wrap -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-90 thm-layer opc6 position-relative">
+                    <div class="fixed-bg patern-bg back-blend-multiply thm-bg" style="background-image: url(/static/assets/images/pattern-bg.jpg);"></div>
+                    <div class="container">
+                        <div class="cont-info-wrap res-row overlap-115 w-100">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-lg-4">
+                                    <div class="cont-info-box-wrap w-100">
+                                        <div class="cont-info-box text-center position-relative w-100 pat-bg white-layer opc8 back-blend-multiply bg-white" style="background-image: url(/static/assets/images/pattern-bg.jpg);">
+                                            <span class="bg-color1"><i class="flaticon-call"></i></span>
+                                            <h4 class="mb-0">Мурожаат учун тел:</h4>
+                                            <p class="mb-0">+99890 540-16-96</p>
+                                            <p class="mb-0">+99890 540-16-96</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-lg-4">
+                                    <div class="cont-info-box-wrap w-100">
+                                        <div class="cont-info-box text-center position-relative w-100 pat-bg white-layer opc8 back-blend-multiply bg-white" style="background-image: url(/static/assets/images/pattern-bg.jpg);">
+                                            <span class="bg-color1"><i class="flaticon-mail"></i></span>
+                                            <h4 class="mb-0">Электон почта манзили</h4>
+                                            <p class="mb-0"><a href="javascript:void(0);" title="">Qorabosh-Ota@gmail.com</a></p>
+                                            <p class="mb-0"><a href="javascript:void(0);" title="">javlonbektorajonov2003@gmail.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-lg-4">
+                                    <div class="cont-info-box-wrap w-100">
+                                        <div class="cont-info-box text-center position-relative w-100 pat-bg white-layer opc8 back-blend-multiply bg-white" style="background-image: url(/static/assets/images/pattern-bg.jpg);">
+                                            <span class="bg-color1"><i class="fas fa-map-marker-alt"></i></span>
+                                            <h4 class="mb-0">Масжид манзили</h4>
+                                        <p class="mb-0">Андижон тумани Ботакора КФЙ 8- Март кучаси</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- Contact Info Wrap -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pb-250 position-relative"><br><br><br><br><br><br><br><br><br><br>
+                    
+                    <div class="container">
+                        <div class="contact-wrap mt-100 w-100">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 col-lg-6">
+                                    <div class="cont-info-desc w-100">
+                                        <h3 class="mb-0">Корабош-Ота Масжиди билан боғланиш</h3>
+                                        <p class="mb-0">Илтимос боғланиш учун қуйдаги сўровларни тўлиқ бажариб Юбориш тугмасини босинг</p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-12 col-lg-6">
+                                    <form class="cont-form w-100" method="POST">
+                                        {%csrf_token%}
+                                        <input type="text" name="name" placeholder="Исм Фамилиянгиз">
+                                        <input type="email" name="email" placeholder="Электрон почтангиз">
+                                        <input type="text" name="phone" placeholder="Телeфон рақамингиз">
+                                        <textarea name="message" placeholder="Хабарингиз"></textarea>
+                                        <button class="thm-btn thm-bg" type="submit">Хабарни Юбориш<span></span><span></span><span></span><span></span></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div><!-- Contact Wrap -->
+                    </div>
+                </div>
+            </section>
+{%endblock%}

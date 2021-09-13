@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="icon" href="{% static 'assets/images/favicon.png' %}" sizes="35x35" type="image/png">
+        <title>Корабош-ота жоме масжиди</title>
+
+        <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/jquery.fancybox.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/jquery.bootstrap-touchspin.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/perfect-scrollbar.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/color.css' %}">
+    </head>
+
+    <body>
+        <main>
+            <div id="preloader">            
+                <div class="preloader-inner">
+                    <i class="preloader-icon thm-clr flaticon-kaaba"></i>
+                </div>
+            </div><!-- Page Loader -->
+            <header class="stick style2 w-100">
+                <div class="topbar bg-color1 d-flex flex-wrap justify-content-between w-100">
+                	<div class="topbar-left">
+                		<ul class="topbar-info-list mb-0 list-unstyled d-inline-flex">
+	                        <li><i class="thm-clr far fa-envelope"></i><a href="javascript:void(0);" title="">Qoraboshota@gmail.com</a></li>
+	                        <li><i class="thm-clr fas fa-phone-alt"></i>+99890 540-16-96</li>           
+                            <li><i class="fa fa-clock"></i>{{timer}}</li> 
+                            
+	                    </ul>
+                	</div>
+                    <div class="topbar-right d-inline-flex">
+                    	<ul class="topbar-info-list mb-0 list-unstyled d-inline-flex">
+	                        <li><i class="thm-clr flaticon-sun"></i>Куеш чикиши: <span class="thm-clr">3:37</span></li>
+
+	                        <li><i class="thm-clr flaticon-moon"></i>Куеш ботиши: <span class="thm-clr">19:14</span></li>
+	                    </ul>
+	                    <div class="social-links d-inline-flex">
+	                        <a href="https://twitter.com/" title="Twtiiter" target="_blank"><i class="fab fa-twitter"></i></a>
+	                        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+	                        <a href="https://www.youtube.com/" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+	                        <a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+	                        <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+	                    </div>
+                    </div>
+                </div><!-- Topbar -->
+                <div class="logo-menu-wrap v2 d-flex flex-wrap align-items-center justify-content-between w-100 pat-bg thm-layer opc65 back-blend-multiply thm-bg" style="background-image: url(/static/assets/images/pattern-bg.jpg);">
+                    <div class="logo"><h1 class="mb-0"><a href="" title="Home"><img class="img-fluid" src="/static/assets/images/logo121.png"  width="130" height="100" alt="Logo" srcset="/static/assets/images/logo121.png"    width="130" height="100"></a></h1></div><!-- Logo -->
+                    <nav class="d-flex flex-wrap align-items-center justify-content-between">
+                        <div class="header-left">
+                        	<ul class="mb-0 list-unstyled d-inline-flex">
+                                <li class="menu-item-has-children"><a href="{% url 'mainapp:Home' %}" title="">Бош саҳифа</a>
+                                </li>
+                                <li class="menu-item-has-children"><a href="{% url 'mainapp:Blog' %}" title="">Мақолалар</a>
+                                </li>
+                                <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Саҳифалар</a>
+                                    <ul class="mb-0 list-unstyled">
+                                    
+                                    
+                                        <li class="menu-item-has-children"><a href="{% url 'mainapp:gallery' %}" title="">Бизниг галареяларимиз</a>
+                                        </li>
+                                        <li><a href="{% url 'mainapp:audio' %}" title="">Аудио қуронлар</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'mainapp:About' %}" title="">Масжид ҳақида</a></li>
+                                <li><a href="{% url 'mainapp:Contact' %}" title="">Алоқа хизмати</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div><!-- Logo Menu Wrap -->
+            </header><!-- Header -->
+            <div class="sticky-menu">
+                <div class="container">
+                    <div class="sticky-menu-inner d-flex flex-wrap align-items-center justify-content-between w-100">
+                        <div class="logo"><h1 class="mb-0"><a href="" title="Home"><img class="img-fluid" src="https://image.shutterstock.com/image-vector/modern-islamic-mosque-quran-logo-260nw-1104979970.jpg" width="120" height="150" alt="Logo" srcset="https://image.shutterstock.com/image-vector/modern-islamic-mosque-quran-logo-260nw-1104979970.jpg" width="120" height="150"></a></h1></div><!-- Logo -->
+                        <nav class="d-flex flex-wrap align-items-center justify-content-between">
+                            <div class="header-left">
+                                <ul class="mb-0 list-unstyled d-inline-flex">
+                                    <li class="menu-item-has-children"><a href="{% url 'mainapp:Home' %}" title="">Бош саҳифа</a>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="{% url 'mainapp:Blog' %}" title="">Мақолалар</a>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Саҳифалар</a>
+                                        <ul class="mb-0 list-unstyled">
+                                       
+                                    
+                                            <li class="menu-item-has-children"><a href="{% url 'mainapp:gallery' %}" title="">Бизниг галареяларимиз</a>
+                                            </li>
+                                     
+                                            <li><a href="{% url 'mainapp:audio' %}" title="">Аудио қуронлар</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'mainapp:About' %}" title="">Масжид ҳақида</a></li>
+                                    <li><a href="{% url 'mainapp:Contact' %}" title="">Алоқа хизмати</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div><!-- Sticky Menu -->
+            <div class="rspn-hdr">
+                <div class="rspn-mdbr">
+                    <div class="rspn-scil">
+                        <a href="https://twitter.com/" title="Twtiiter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <form class="rspn-srch">
+                        <input type="text" placeholder="Enter Your Keyword">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="lg-mn">
+                    <div class="logo"><a href="" title="Home"><img src="/static/assets/images/logo121.png" width="130" height="100" alt="Logo"></a></div>
+                    <div class="rspn-cnt">
+                        <span><i class="thm-clr far fa-envelope"></i><a href="javascript:void(0);" title="">info@imomiazam.com</a></span>
+                        <span><i class="thm-clr fas fa-phone-alt"></i>+998 90 540 16 96</span>
+                    </div>
+                    <span class="rspn-mnu-btn"><i class="fa fa-list-ul"></i></span>
+                </div>
+                <div class="rsnp-mnu">
+                    <span class="rspn-mnu-cls"><i class="fa fa-times"></i></span>
+                    <ul class="mb-0 list-unstyled w-100">
+                        <li class="menu-item-has-children"><a href="{% url 'mainapp:Home' %}" title="">Бош саҳифа</a>
+                        </li>
+                        <li class="menu-item-has-children"><a href="{% url 'mainapp:Blog' %}" title="">Мақолалар</a>
+                        </li>
+
+                        <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Саҳифалар</a>
+                            <ul class="mb-0 list-unstyled">
+
+                            
+                          
+                                <li class="menu-item-has-children"><a href="{% url 'mainapp:gallery' %}" title="">Бизниг галареяларимиз</a>
+                                </li>
+                                <li><a href="{% url 'mainapp:audio' %}" title="">Аудио қуронлар</a></li>
+                            </ul>
+                        </li>
+             
+                        <li><a href="{% url 'mainapp:About' %}" title="">Масжид ҳақида</a></li>
+                        <li><a href="{% url 'mainapp:Contact' %}" title="">Алоқа хизмати</a></li>
+                    </ul>
+                </div><!-- Responsive Menu -->
+            </div><!-- Responsive Header -->
+            <section>
+            	<div class="w-100 position-relative">
+            		<div class="time-wrap2 w-100">
+            			<div class="row align-items-center">
+            				<div class="col-md-12 col-sm-12 col-lg-4">
+            					<div class="time-title w-100">
+            						<h4 class="mb-0">Kech bo'lmasidan Allohga Ibodat qiling</h4>
+            						<p class="mb-0 thm-clr">{{time}}</p>
+            					</div>
+            				</div>
+            				<div class="col-md-12 col-sm-12 col-lg-8">
+            					<ul class="time-list2 d-flex flex-wrap w-100 mb-0 list-unstyled">{%for times in times%}
+            						<li><span>{{times.name}}:</span>{{times.time}}</li>
+
+                                    {%endfor%}
+            					</ul>
+            				</div>
+            			</div>
+            		</div><!-- Time Wrap -->
+            	</div>
+            </section>
+            <section>
+                <div class="w-100 position-relative">
+                    <div class="feat-wrap v2 position-relative w-100">
+                        <div class="feat-caro">
+                            <div class="feat-item v2">
+                                <div class="feat-img position-absolute" style="background-image: url(static/assets/3ed6730bde7f7183a6b1b1c051bae55f.jpg);"></div>
+                                <div class="feat-cap-wrap position-absolute d-inline-block">
+	                                <div class="feat-cap left-icon d-inline-block">
+	                                    <i class="d-inline-block flaticon-rub-el-hizb thm-clr"></i>
+	                                    <h2 class="mb-0">Корабош-ота Жоме жоме масжидиниг расмий веб саҳифаси</h2>
+	                                    <p class="mb-0"></p>
+	                                    <a class="thm-btn thm-bg" href="{% url 'mainapp:About' %}" title="">Корабош-ота Жоме Масжиди<span></span><span></span><span></span><span></span></a>
+	                                </div>
+                                </div>
+                            </div>
+                            <div class="feat-item v2">
+                                <div class="feat-img position-absolute" style="background-image: url(static/assets/original.jpg);"></div>
+                                <div class="feat-cap-wrap position-absolute d-inline-block">
+	                                <div class="feat-cap left-icon d-inline-block">
+	                                    <i class="d-inline-block flaticon-rub-el-hizb thm-clr"></i>
+	                                    <h2 class="mb-0">Namoz bilan imkonsiz narsa yo'q</h2>
+	                                    <p class="mb-0"></p>
+	                                    <a class="thm-btn thm-bg" href="about.html" title="">Корабош ота жоме масжиди<span></span><span></span><span></span><span></span></a>
+	                                </div>
+                                </div>
+                            </div>
+                            <div class="feat-item v2">
+                                <div class="feat-img position-absolute" style="background-image: url(static/assets/mechet-sultana_0.jpg);"></div>
+                                <div class="feat-cap-wrap position-absolute d-inline-block">
+	                                <div class="feat-cap left-icon d-inline-block">
+	                                    <i class="d-inline-block flaticon-rub-el-hizb thm-clr"></i>
+	                                    <h2 class="mb-0">Islom - Ibrohimning yakka xudolik dinidir</h2>
+	                                    <p class="mb-0"></p>
+	                                    <a class="thm-btn thm-bg" href="about.html" title="">Корабош ота жоме масжиди<span></span><span></span><span></span><span></span></a>
+	                                </div>
+	                            </div>
+                            </div>
+                        </div>
+                    </div><!-- Featured Area Wrap -->
+                </div>
+            </section>
+            <section>
+                <div class="w-100 position-relative">
+                    <div class="container">
+                    	<div class="plyr-wrp v2 overlap45 overlap-45 w-100">
+                            <div class="row mrg">
+                            	<div class="col-md-12 col-sm-12 col-lg-4">
+                            		<h3 class="mb-0 text-center pat-bg thm-layer opc65 back-blend-multiply thm-bg" style="background-image: url(/static/assets/images/pattern-bg.jpg);">ҚУРЪОН АУДИО-НИ ТИНГЛАНГ</h3>
+                            	</div>
+                            	<div class="col-md-12 col-sm-12 col-lg-8">
+		                            <div class="plyr-inner position-relative pat-bg white-layer opc9 back-blend-multiply bg-white" style="background-image: url(/static/assets/images/pattern-bg.jpg);">
+		                                <div class="plyr v2 w-100">
+		                                    <ul class="playlist mb-0 list-unstyled">
+		                                        <li data-cover="https://media.istockphoto.com/vectors/vector-islam-kuran-ramadan-islamic-arabic-symbolism-vector-id1169856943?k=6&m=1169856943&s=612x612&w=0&h=IV5Yo7DCqJxNA__oO5VutqCDTuXQFTogExmPPGXBoD8=" data-artist="(o'zbek tilida manosi)"><a href="http://24soat.com/mp3/islom_maruza/Fotiha_surasi_Afzal_Rafiqov_24soat.com.mp3" title="">Surah Fath</a></li>
+		                                    </ul>
+		                                </div>
+		                            </div>
+                            	</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-155 pb-90 position-relative">
+                    <img class="img-fluid sec-top-mckp position-absolute" src="/static/assets/images/sec-top-mckp2.png" alt="Sec Top Mockup 2">
+                    <div class="container">
+                        <div class="about-wrap2 w-100">
+                        	<div class="row">
+                        		<div class="col-md-6 col-sm-12 col-lg-5">
+                        			<div class="about-title w-100">
+                        				<h2 class="mb-0">Ислом тарихни бошланиши</h2>
+                        				<p class="mb-0 thm-clr">Ер юзидаги биринчи одам</p>
+                        				<a class="thm-btn bg-color1" href="{% url 'mainapp:About' %}" title="">Кўпроқ ўқиш<span></span><span></span><span></span><span></span></a>
+                        			</div>
+                        		</div>
+                        		<div class="col-md-6 col-sm-12 col-lg-7">
+                        			<div class="about-inner2 w-100">
+                                		<img class="img-fluid" src="/static/assets/images/bism-img2.png" alt="Bismillah Image">
+                                		<p class="mb-0">Ислом (арабча — бўйсуниш, итоат этиш, ўзини Аллоҳ иродасига топшириш) — жаҳонда кенг тарқалган уч диндан (буддизм ва христианлик билан бир қаторда) бири. Ислом динига эътиқод қилувчилар арабча „муслим“ („садоқатли“; кўплиги „муслимун“) деб аталади. „Муслим“, „муслимун“ сўзининг бошқа халқлар орасида ўзгача талаффуз этиш (масалан</p>
+                                		
+                        			</div>
+                        		</div>
+                        	</div>
+                        </div><!-- About Wrap 2 -->
+                        <div class="video-quote-wrap mt-100 w-100 position-relative">
+                        	<div class="video-box w-100 position-relative">
+                        		<img style="height:589px;max-width=730px" class="img-fluid w-100" src="/static/assets/39_tashkent-4.jpg" alt="Video Image">
+                        		<a class="position-absolute spinner bg-color1" href="https://youtu.be/_d64nMy-x9k" data-fancybox title=""><i class="fas fa-play"></i></a>
+                        	</div>
+                        	<div class="quote-box position-absolute pat-bg thm-layer opc65 back-blend-multiply thm-bg" style="background-image: url(https://lh3.googleusercontent.com/proxy/1jTgMx7ajEJMhX7T3GaYdgR1abS5RcsKodzlsdrNt-r2pvkj5e6o85w19O8JJCJ0p5XxVH0_YML6Ja3vFEVESnwIOiAsNwTEPbs);">
+                        		<p class="mb-0">Билиб қўйинг хаётда зўрдан зўр хам чиқади вой пешонам шўр деманг ундан ҳам шўри чиқади. Омадни сиз қувманг қувсангиз у кетади, доим халол бўлсангиз ўзи қувиб етади , кимдур ақилли бўлар кимдур ундан ўтади кўп билгани охири кўп саволлар кутади осмондаги булутлар доим учиб юради айтинг қайси зўр инсон мангу ҳаёт кўради манманликдан фойда йўқ хар бир ИНСОН О"ЛАДИ</p>
+                        		<h4 class="mb-0">Шайх Муҳаммад Содиқ Муҳаммад Юсуф</h4>
+                        		<span class="d-block">1952 - 2015</span>
+                        	</div>
+                        </div><!-- Video Quote Wrap -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-110 paralx-52 black-layer pb-110 opc7 position-relative">
+                	<div class="fixed-bg" style=" background-attachment: fixed;background-image: url(https://muxlis.uz/uploads/faq/2542796a76b461b1c74124459fae92e8.jpg);"></div>
+                    <img class="img-fluid sec-btm-mckp sec-btm-140 position-absolute" src="/static/assets/images/sec-top-mckp3.png" alt="Sec Top Mockup 3">
+                    <div class="container">
+                        <div class="sec-title v2 text-center w-100">
+                            <div class="sec-title-inner d-inline-block">
+                                <i class="flaticon-rub-el-hizb thm-clr"></i>
+                                <h1 class="mb-0">Янги қошилган мақолалар</h1>
+                                <p class="mb-0">Масжид янгиликлари ва Мақолалардан ҳабардор бўлинг</p>
+                            </div>
+                        </div><!-- Sec Title -->
+                        <div class="serv-wrap2 res-row w-100">
+                        	<div class="row">
+                                {%for blogs in blog %}
+                        		<div class="col-md-6 col-sm-6 col-lg-4">
+                        			<div class="serv-box2 text-center position-relative w-100">
+                        				<div class="serv-img overflow-hidden position-relative w-100">
+                        					<a href="{{blogs.get_absalute_url}}" title=""><img style="height:150px; max-width:300px" class="img-fluid w-100" src="{{blogs.image.url}}" alt="Service Image 3"></a>
+                        				</div>
+                        				<div class="serv-info w-100">
+                        					<h3 class="mb-0"><a href="{{blogs.get_absalute_url}}" title="">{{blogs.title}}</a></h3>
+                        					<p class="mb-0">Давомини ўқиш учун босинг</p><br><br>
+                                            <a href="{{blogs.get_absalute_url}}" title="">
+                                                <button type="button" class="btn btn-success">Давомини ўқиш </button>
+                                            </a>
+                        				</div>
+                        			</div>
+                        		</div>
+                                {%endfor%}
+                        	</div>
+                        </div><!-- Services Wrap 2 -->
+                        <div class="view-more mt-20 d-inline-block text-center w-100">
+                            <a class="thm-btn bg-color1" href="{% url 'mainapp:Blog' %}" title="">Барча мақолалар<span></span><span></span><span></span><span></span></a>
+                        </div><!-- View More -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-80 thm-layer pb-50 opc7 position-relative">
+                    <div class="fixed-bg patern-bg back-blend-multiply thm-bg" style="background-image: url(/static/assets/images/pattern-bg.jpg);"></div>
+                    <div class="container">
+                        <div class="facts-wrap w-100">
+                        	<div class="row">
+                        		<div class="col-md-4 col-sm-6 col-lg-4">
+                        			<div class="fact-box d-flex flex-wrap align-items-center w-100">
+                        				<span class="rounded-circle"><i class="flaticon-mosque-3"></i></span>
+                        				<div class="fact-inner">
+                        					<h3 class="mb-0 counter">300</h3>
+                        					<h5 class="mb-0">Анджондаги Масжидлар сони</h5>
+                        				</div>
+                        			</div>
+                        		</div>
+                        		<div class="col-md-4 col-sm-6 col-lg-4">
+                        			<div class="fact-box d-flex flex-wrap align-items-center w-100">
+                        				<span class="rounded-circle"><i class="flaticon-mat-1"></i></span>
+                        				<div class="fact-inner">
+                        					<h3 class="mb-0 counter">410</h3>
+                        					<h5 class="mb-0">Андижон даги Имомлар сони</h5>
+                        				</div>
+                        			</div>
+                        		</div>
+                        		<div class="col-md-4 col-sm-6 col-lg-4">
+                        			<div class="fact-box d-flex flex-wrap align-items-center w-100">
+                        				<span class="rounded-circle"><i class="flaticon-beads"></i></span>
+                        				<div class="fact-inner">
+                        					<h3 class="mb-0 counter">8,100</h3>
+                        					<h5 class="mb-0">Islamic Years Together</h5>
+                        				</div>
+                        			</div>
+                        		</div>
+                        	</div>
+                        </div><!-- Facts Wrap -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-140 black-layer pb-150 opc7 position-relative">
+                    <div class="fixed-bg" style=" background-attachment: fixed;background-image: url(https://i.pinimg.com/originals/cf/fe/40/cffe4089eeddeede4089ad015b589763.png);"></div>
+                    <div class="container">
+                        <div class="month-donat-wrap text-center w-100">
+                        	<div class="month-donat-inner d-inline-block">
+                        		<i class="thm-clr flaticon-rub-el-hizb"></i>
+                        		<h2 class="mb-0">Аллоҳ жаннатда сиз учун қаср қуриб беришини истайсизми , <br> Унда хайрли ишга шошилинг!</h2>
+                        		<p class="mb-0"></p>
+                        		
+                        	</div>
+                        </div><!-- Monthly Donate Wrap -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-100 pb-210 position-relative">
+                    <img class="img-fluid sec-top-mckp position-absolute" src="/static/assets/images/sec-top-mckp2.png" alt="Sec Top Mockup 2">
+                    <img class="sec-btm-mckp img-fluid position-absolute" src="/static/assets/images/sec-botm-mckp.png" alt="Sec Bottom Mockup 2">
+                    <!--
+                    <div class="container">
+                        <div class="sec-title text-center w-100">
+                            <div class="sec-title-inner d-inline-block">
+                                <i class="flaticon-rub-el-hizb thm-clr"></i>
+                                <h2 class="mb-0">Masjid yangiliklari & Maqolalri</h2>
+                                <p class="mb-0">Masjidgai o'zgarishlar hamda yangiliklarini kuzatip boring</p>
+                            </div>
+                        </div>
+                        <div class="blog-wrap2 w-100">
+                        	<div class="post-box2 position-relative d-flex flex-wrap align-items-center w-100">
+                        		<div class="post-img2 overflow-hidden position-absolute">
+                        			<a href="blog-detail.html" title=""><img class="img-fluid w-100" src="/static/assets/images/resources/blog-img2-1.jpg" alt="Blog Image 1"></a>
+                        		</div>
+
+                        		<div class="post-info2">
+                        			<div class="post-info2-inner text-center">
+                        				<div class="post-date2">
+                        					<span class="d-block">12</span>
+                        					<i class="d-block thm-bg">Jul 2019</i>
+                        				</div>
+                        				<div class="post-meta4 w-100">
+                        					<span class="d-block"><i class="far fa-eye"></i>50 Views</span>
+                        					<span class="d-block"><i class="far fa-comment"></i>30</span>
+                        				</div>
+                        			</div>
+                        			<ul class="post-meta2 d-inline-flex flex-wrap align-items-center mb-0 list-unstyled">
+                        				<li class="thm-clr">City, Goverment</li>
+                        				<li class="thm-clr"><img class="img-fluid rounded-circle" src="/static/assets/images/resources/post-author-thumb1-1.jpg" alt="Post Author Thumb 1">BY: <a href="javascript:void(0);" title="">Gold Mines</a></li>
+                        			</ul>
+                        			<h3 class="mb-0"><a href="blog-detail.html" title="">American Muslim: Choosing to Remain Still This Ramadan</a></h3>
+                        			<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisiuam, od mai consectetur Aliquam li onsectetur adipisiua odi um dolor sit consectetur adipisiuam.</p>
+                        			<a class="thm-btn thm-bg" href="blog-detail.html" title="">Davomini o'qish<span></span><span></span><span></span><span></span></a>
+                        			<div class="post-share position-relative">
+                        				<i class="fas fa-share"></i>
+                        				<span class="post-share-social position-absolute">
+                        					<a href="https://twitter.com/" title="Twtiiter" target="_blank"><i class="fab fa-twitter"></i></a>
+					                        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+					                        <a href="https://www.youtube.com/" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+					                        <a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+					                        <a href="https://www.instagram.com/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        				</span>
+                        			</div>
+                        		</div>
+                        	</div>
+                        </div>
+                        <div class="view-more mt-50 d-inline-block text-center w-100">
+                            <a class="thm-btn bg-color1" href="blog2.html" title="">More Updates<span></span><span></span><span></span><span></span></a>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </section>
+            <footer style="background:#272727">
+                <div class="w-100 pt-100 thm-layer pb-70 opc8 position-relative">
+                    <div class="fixed-bg patern-bg back-blend-multiply thm-bg" style="background-image: url(/static/assets/images/pattern-bg.jpg);"></div>
+                    <div class="container">
+                        <div class="footer-data v2 w-100">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <div class="widget text-center w-100">
+                                        <div class="widget-inner d-inline-block">
+                                        	<div class="logo"><h1 class="mb-0"><a href="" title="Home">
+                                             <h1 style="color:#fff">Сайт харитаси</h1>   
+                                            </a></h1></div>
+                                        	<p class="mb-0">Ассалому алайкум Корабош-ота Жоме масжидиниг веб сайит хартаснини шу ердан ҳам бошқаринг..</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-lg-4">
+                                    <div class="widget w-100">
+                                        <ul class="mb-0 list-unstyled w-100">
+                                            <li><a href="{% url 'mainapp:audio' %}" title="">Аудио Қурон</a></li>
+                                            <li><a href="{% url 'mainapp:Blog' %}" title="">Мақолалар</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-lg-4">
+                                    <div class="widget w-100">
+                                        <ul class="mb-0 list-unstyled w-100">
+                                            <li><a href="{% url 'mainapp:About' %}" title="">Масжид ҳақида</a></li> 
+                                            <li><a href="{% url 'mainapp:Home' %}" title="">Бош саҳифа</a></li> 
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-lg-4">
+                                    <div class="widget w-100">
+                                        <ul class="mb-0 list-unstyled w-100">
+                                            <li><a href="{% url 'mainapp:Contact' %}" title="">Алоқа хизмати</a></li>
+                                            <li><a href="{% url 'mainapp:gallery' %}" title=""> Бизниг галареяларимиз</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- Footer Data -->
+			            <div class="bottom-bar2 text-center w-100">
+			                <p class="mb-0"><a href="{% url 'mainapp:Home' %}" title="Home">Корабош-ота Жоме</a> - жоме масжиди 2021. <a href="https://themeforest.net/user/nauthemes/portfolio" title="Nauthemes" target="_blank">Арабжонов</a></p>
+			            </div><!-- Bottom Bar -->
+                    </div>
+                </div>
+            </footer><!-- Footer -->
+        </main><!-- Main Wrapper -->
+
+
+            <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/popper.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/js/wow.min.js' %}"></script>
+        <script src="{% static 'assets/js/counterup.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.fancybox.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.bootstrap-touchspin.min.js' %}"></script>
+        <script src="{% static 'assets/js/perfect-scrollbar.min.js' %}"></script>
+        <script src="{% static 'assets/js/slick.min.js' %}"></script>
+        <!-- <script src="assets/js/particle-int.js"></script> -->
+        <script src="{% static 'assets/js/musicplayer-min.js' %}"></script>
+        <script src="{% static 'assets/js/circle-progress.min.js' %}"></script>
+        <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js' %}"></script>
+        <script src="{% static 'assets/js/custom-scripts.js' %}"></script>
+    </body> 
+</html>

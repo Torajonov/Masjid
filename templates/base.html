@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <link rel="icon" href="{% static 'assets/images/favicon.png' %}" sizes="35x35" type="image/png">
+        <title>Корабош-ота жоме масжиди</title>
+
+        <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/jquery.fancybox.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/jquery.bootstrap-touchspin.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/perfect-scrollbar.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/color.css' %}">
+    </head>
+    <body>
+        <main>
+            <div id="preloader">            
+                <div class="preloader-inner">
+                    <i class="preloader-icon thm-clr flaticon-kaaba"></i>
+                </div>
+            </div><!-- Page Loader -->
+            <header class="stick style1 w-100">
+                <div class="topbar bg-color1 d-flex flex-wrap justify-content-center w-100">
+                    <ul class="topbar-info-list mb-0 list-unstyled d-inline-flex">
+                        <li><i class="thm-clr flaticon-sun"></i>Қуёш чиқиши: <span class="thm-clr">5:05</span></li>
+                        <li><i class="thm-clr flaticon-moon"></i>Қуёш  ботиши: <span class="thm-clr">19:14</span></li>
+                    </ul>
+                    <div class="social-links d-inline-flex">
+                        <a href="https://twitter.com/" title="Twtiiter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/JavlonbekTorajonov" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/Javlonbek Torajonov" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/javlonbektorajonov_007" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div><!-- Topbar -->
+                <div class="logo-menu-wrap d-flex flex-wrap justify-content-between w-100">
+                    <span><img src="/static/assets/images/logo121.png" width="140" height="100" alt=""></span>    
+                    <nav class="d-flex flex-wrap align-items-center justify-content-center">
+                        <div class="header-left">
+                            <ul class="mb-0 list-unstyled d-inline-flex">
+                                <li class="menu-item-has-children"><a href="{% url 'mainapp:Home' %}" title="">Bosh sahifa</a>
+                                </li>
+                                <li class="menu-item-has-children"><a href="{% url 'mainapp:Blog' %}" title="">Maqolalar</a>
+                                </li>
+                                <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Sahifalar</a>
+                                    <ul class="mb-0 list-unstyled">
+                                        <li class="menu-item-has-children"><a href="{% url 'mainapp:gallery' %}" title="">Bizning galareyalarimiz</a>
+                                        </li>
+                                        <li><a href="{% url 'mainapp:audio' %}" title="">Audio qur'on</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'mainapp:About' %}" title="">Masjidimiz haqida</a></li>
+                                <li><a href="{% url 'mainapp:Contact' %}" title="">Aloqa xizmati</a></li>
+                                
+                            </ul>
+                        </div>
+                    </nav>
+                </div><!-- Logo Menu Wrap -->
+            </header><!-- Header -->
+            <div class="sticky-menu">
+                <div class="container">
+                    <div class="sticky-menu-inner d-flex flex-wrap align-items-center justify-content-between w-100">
+                        <span><img src="/static/assets/images/logo121.png.jpg" width="140" height="100" alt=""></span> 
+                        <nav class="d-flex flex-wrap align-items-center justify-content-between">
+                            <div class="header-left">
+                                <ul class="mb-0 list-unstyled d-inline-flex">
+                                    <li class="menu-item-has-children"><a href="{% url 'mainapp:Home' %}" title="">Bosh sahifa</a>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="{% url 'mainapp:Blog' %}" title="">Maqolalar</a>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Sahifalarimiz</a>
+                                        <ul class="mb-0 list-unstyled">
+                                            <li class="menu-item-has-children"><a href="{% url 'mainapp:gallery' %}" title="">Bizning galareyalarimiz</a>
+                                            <li><a href="{% url 'mainapp:audio' %}" title="">Audio qur'on</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="{% url 'mainapp:About' %}" title="">Masjidimiz haqida</a></li>
+                                    <li><a href="{% url 'mainapp:Contact' %}" title="">Aloqa xizmati</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div><!-- Sticky Menu -->
+            <div class="rspn-hdr">
+                <div class="rspn-mdbr">
+                    <div class="rspn-scil">
+                        <a href="https://twitter.com/" title="Twtiiter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <form class="rspn-srch">
+                        <input type="text" placeholder="Enter Your Keyword">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="lg-mn">
+                    <span><img src="/static/assets/images/logo121.png" width="100" height="100" alt=""></span> 
+                    <div class="rspn-cnt">
+                        <span><i class="thm-clr far fa-envelope"></i><a href="javascript:void(0);" title="">info@youremailid.com</a></span>
+                        <span><i class="thm-clr fas fa-phone-alt"></i>+998 90 540-16-96</span>
+                    </div>
+                    <span class="rspn-mnu-btn"><i class="fa fa-list-ul"></i></span>
+                </div>
+                <div class="rsnp-mnu">
+                    <span class="rspn-mnu-cls"><i class="fa fa-times"></i></span>
+                    <ul class="mb-0 list-unstyled w-100">
+                        <li class="menu-item-has-children"><a href="{% url 'mainapp:Home' %}" title="">Бош саҳифа</a>
+                        </li>
+                        <li class="menu-item-has-children"><a href="{% url 'mainapp:Blog' %}" title="">Мақолалар</a>
+                        </li>
+                        <li class="menu-item-has-children"><a href="javascript:void(0);" title="">Саҳифаларимиз</a>
+                            <ul class="mb-0 list-unstyled">
+                            
+                               
+                             
+                               
+                                <li class="menu-item-has-children"><a href="{% url 'mainapp:gallery' %}" title="">Бизниг галареяларимиз</a>
+                                </li>
+                              
+                                <li><a href="{% url 'mainapp:audio' %}" title="">Аудио Қурон</a></li>
+                            </ul>
+                        </li>
+                    
+
+                        <li><a href="{% url 'mainapp:About' %}" title="">Масжид ҳақида</a></li>
+                        <li><a href="{% url 'mainapp:Contact' %}" title="">Алоқа хизмати</a></li> <li>
+                    </ul>
+                </div><!-- Responsive Menu -->
+            </div><!-- Responsive Header -->
+
+
+
+
+
+
+{%block content%}
+{%endblock%}
+
+
+           <footer style="background:#272727">
+                <div class="w-100 pt-100 thm-layer pb-70 opc8 position-relative">
+                    <div class="fixed-bg patern-bg back-blend-multiply thm-bg" style="background-image: url(/static/assets/images/pattern-bg.jpg);"></div>
+                    <div class="container">
+                        <div class="footer-data v2 w-100">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <div class="widget text-center w-100">
+                                        <div class="widget-inner d-inline-block">
+                                            <div class="logo"><h1 class="mb-0"><a href="" title="Home">
+                                             <h1 style="color:#fff">Сайт харитаси</h1>   
+                                            </a></h1></div>
+                                            <p class="mb-0">Ассалому алайкум Корабош-ота масжидиниг веб сайт хартаснини шу ердан ҳам бошқаринг..</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-lg-4">
+                                    <div class="widget w-100">
+                                        <ul class="mb-0 list-unstyled w-100">
+                                            <li><a href="{% url 'mainapp:audio' %}" title="">Аудио Қурон</a></li>
+                                            <li><a href="{% url 'mainapp:Blog' %}" title="">Мақолалар</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-lg-4">
+                                    <div class="widget w-100">
+                                        <ul class="mb-0 list-unstyled w-100">
+                                            <li><a href="{% url 'mainapp:About' %}" title="">Масжид ҳақида</a></li> 
+                                            <li><a href="{% url 'mainapp:Home' %}" title="">Бош саҳифа</a></li> 
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-lg-4">
+                                    <div class="widget w-100">
+                                        <ul class="mb-0 list-unstyled w-100">
+                                            <li><a href="{% url 'mainapp:Contact' %}" title="">Алоқа хизмати</a></li>
+                                            <li><a href="{% url 'mainapp:gallery' %}" title=""> Бизниг галареяларимиз</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- Footer Data -->
+                        <div class="bottom-bar2 text-center w-100">
+                            <p class="mb-0"><a href="{% url 'mainapp:Home' %}" title="Home">Корабош-ота</a> - жоме масжиди 2021. <a href="https://www.instagram.com/javlonbektorajonov_007"  target="_blank">Туражонов Жавлонбек</a></p>
+                        </div><!-- Bottom Bar -->
+                    </div>
+                </div>
+            </footer><!-- Footer -->
+        </main><!-- Main Wrapper -->
+
+
+            <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/popper.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/js/wow.min.js' %}"></script>
+        <script src="{% static 'assets/js/counterup.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.fancybox.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.bootstrap-touchspin.min.js' %}"></script>
+        <script src="{% static 'assets/js/perfect-scrollbar.min.js' %}"></script>
+        <script src="{% static 'assets/js/slick.min.js' %}"></script>
+        <!-- <script src="assets/js/particle-int.js"></script> -->
+        <script src="{% static 'assets/js/musicplayer-min.js' %}"></script>
+        <script src="{% static 'assets/js/circle-progress.min.js' %}"></script>
+        <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js' %}"></script>
+        <script src="{% static 'assets/js/custom-scripts.js' %}"></script>
+    </body> 
+</html>

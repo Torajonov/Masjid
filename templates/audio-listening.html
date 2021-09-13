@@ -1,0 +1,63 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+            <section>
+                <div class="w-100 pt-80 black-layer pb-70 opc65 position-relative">
+                    <div class="fixed-bg" style="background-image: url(https://lifeglobe.net/x/entry/2330/enlightening_by_el3sl.jpg);"></div>
+                    <div class="container">
+                        <div class="page-title-wrap text-center w-100">
+                            <div class="page-title-inner d-inline-block">
+                                <h1 class="mb-0"> АУДИО ҚУРЪОН ТИНГЛАНГ</h1>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="{% url 'mainapp:Home' %}" title="Home">Масжид - Бош саҳифа</a></li>
+                                    <li class="breadcrumb-item active">АУДИО ҚУРЪОН </li>
+                                </ol>
+                            </div>
+                        </div><!-- Page Title Wrap -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="w-100 pt-120 pb-250 position-relative">
+                    <img class="sec-botm-rgt-mckp img-fluid position-absolute" src="/static/assets/images/sec-botm-mckp.png" alt="Sec Bottom Mockup">
+                    <div class="container">
+                        {%for audios in audio %}
+                        <div class="plyr-wrp2 d-inline-block w-100">
+                            <div class="plyr-box w-100 pat-bg white-layer opc85 back-blend-multiply bg-white" style="background-image: url(/static/assets/images/pattern-bg.jpg);">
+                                <div class="plyr v4 w-100">
+                                    <ul class="playlist mb-0 list-unstyled">
+                                        <li data-cover="{{audios.audio_img.url}}" data-artist=""><a href="{{audios.audio_files.url}}" title="">{{audios.audio_name}}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- Player Wrap 2 -->
+                        {%endfor%}
+                     
+                          <div class="pagination">
+                            <span class="step-links">
+                                {% if page_obj.has_previous %}
+                                    <a href="?page=1">&laquo; first</a>
+                                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                                {% endif %}
+
+                                <span class="current">
+                                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                                </span>
+
+                                {% if page_obj.has_next %}
+                                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                                    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                                {% endif %}
+                            </span>
+                        </div>
+                        </div>
+                      </div>
+                    </div>  
+                  </div>
+                </div>
+              </div>
+                        </div><!-- Pagination Wrap -->
+                    </div>
+                </div>
+            </section>
+{%endblock%}
